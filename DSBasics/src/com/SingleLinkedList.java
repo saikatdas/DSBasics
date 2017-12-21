@@ -202,7 +202,16 @@ public class SingleLinkedList {
 		System.out.println("Number of Node in our LinkedList- "+list.noOfNode());
 		System.out.println("search if 300 is there in linkedlist- "+list.searchNode(300));
 		System.out.println("search if 20 is there in linkedlist- "+list.searchNode(20));
-		System.out.println("Get nth Node from LinkedList , say n=3 "+list.getNthNode(3));
+		System.out.println("Get nth Node from LinkedList,n=2");
+		int result=list.getNthNode(2);
+		if(result==-1)
+		{
+			System.out.println("Index out of LinkedList,or a negetaive index");
+		}
+		else
+		{
+			System.out.println("data of nth Node is "+result);
+		}
 		
 		
 	}
