@@ -148,6 +148,30 @@ public class SingleLinkedList {
 		}
 		return res;
 	}
+	public int getNthNode(int index)
+	{
+		int val=-1;
+		int count=0;
+		int totalNode=noOfNode();
+		if((index<0) || (index>totalNode))
+		{
+			return val;
+		}
+		else{
+			 Node node=head;
+			 while(node!=null)
+			 {
+				if(index==count)
+				{
+					val=node.data;
+					break;
+				}
+				count++;
+				node=node.next;
+			 }
+		}
+		return val;
+	}
 	public static void main(String args[])
 	{
 		SingleLinkedList list=new SingleLinkedList();
@@ -178,6 +202,7 @@ public class SingleLinkedList {
 		System.out.println("Number of Node in our LinkedList- "+list.noOfNode());
 		System.out.println("search if 300 is there in linkedlist- "+list.searchNode(300));
 		System.out.println("search if 20 is there in linkedlist- "+list.searchNode(20));
+		System.out.println("Get nth Node from LinkedList , say n=3 "+list.getNthNode(3));
 		
 		
 	}
